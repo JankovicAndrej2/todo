@@ -6,7 +6,7 @@ module.exports = {
   mode:'development',
   devtool:'inline-source-map',
   devServer: {
-       static: './dist',
+       static: './src',
        },
   output: {
     filename: '[name].js',
@@ -33,7 +33,7 @@ module: {
           {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
-          },
+          }
         ],
       },
 };
