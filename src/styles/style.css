@@ -46,11 +46,37 @@ body{
 .left-plus-img{
     height: 50px;
     margin-left: calc(100% - 50px);
+    cursor:pointer;
 }
 .right-plus-img{
     height: 50px;
     margin-right: 50px;
+    cursor: pointer;
 }
-
+.right-plus-img:hover, .left-plus-img:hover{
+    transform: rotate(360deg);
+    transition-duration: 500ms;
+} 
+.group-name{
+    margin-left: 10px;
+    border-radius: 5px;
+    width: 100vw;
+    font-size: 1.4rem;
+    padding: 5px 20px 5px 10px;
+    background-color: var(--4-green);
+    overflow:hidden;
+}
+.group-name:hover{
+    
+    background-color: var(--4-green+33)
+}
+.left-group>img{
+    height: 20px;
+    cursor: pointer;
+}
+.left-group{
+    display: flex;
+    align-items: center;
+}
 
 
