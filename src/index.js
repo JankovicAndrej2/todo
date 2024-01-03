@@ -1,11 +1,5 @@
 import "./styles/style.css";
 import "./styles/normalize.css";
+import "./script/openCloseLeftForm.js";
 
 
-
-if(JSON.parse(localStorage.getItem("groups")) === null)
-{
-    let groupOfTodo
-}else{
-
-}
