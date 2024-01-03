@@ -79,4 +79,27 @@ body{
     align-items: center;
 }
 
+#name{
+    width: 600px;
+}
+
+.left-form{
+    position: absolute;
+    width:1000px;
+    left:-webkit-calc(50% - 400px);
+    left:-moz-calc(50% - 400px);
+    left:calc(50% - 400px);
+    top:-webkit-calc(50% - 18px);
+    top:-moz-calc(50% - 18px);
+    top:calc(50% - 18px);
+}
+.left-form>*{
+    font-size: 2rem;
+    height: 36px
+}
+.close-left-form, .submit-left-form{
+    height: max-content;
+}
+
+
 
