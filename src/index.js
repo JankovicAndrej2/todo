@@ -6,5 +6,5 @@ import "./script/class.js";
 import "./script/addNewList.js";
 import "./script/VizArray.js";
 import "./script/onLoad.js";
-
+import "./script/leftPlusImg.js";
 

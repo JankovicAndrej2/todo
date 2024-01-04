@@ -4,6 +4,8 @@ let leftForm = document.querySelector(".left-form");
 let name = document.querySelector("#name"); 
 let submitLeftForm = document.querySelector(".submit-left-form");
 let closeLeftForm = document.querySelector(".close-left-form");
+let changeIndex = -1;
+
 
 export function VizArray(){
     lists.textContent= "";
@@ -32,6 +34,18 @@ export function VizArray(){
         img2.src = "../img/deleteIcon.png";
         img2.alt = "delete";
 
+        img1.addEventListener("click", ()=>{
+            changeIndex = i;
+            name.value = array[i].name;
+            leftForm.style.display = "block";
+            submitLeftForm.textContent = "Change";
+            submitLeftForm.classList.remove("submit-left-form");
+            submitLeftForm.classList.add("change-left-form");
+        })
+        
+
+
+
         
         img2.addEventListener("click", ()=>{
             let x = JSON.parse(localStorage.getItem("key"));
@@ -53,3 +67,5 @@ export function VizArray(){
     }
 
 }
+
+export {changeIndex};

@@ -85,10 +85,10 @@ body{
 
 .left-form{
     position: absolute;
-    width:1000px;
-    left:-webkit-calc(50% - 500px);
-    left:-moz-calc(50% - 500px);
-    left:calc(50% - 500px);
+    width:1100px;
+    left:-webkit-calc(50% - 550px);
+    left:-moz-calc(50% - 550px);
+    left:calc(50% - 550px);
     top:-webkit-calc(50% - 18px);
     top:-moz-calc(50% - 18px);
     top:calc(50% - 18px);
@@ -98,7 +98,7 @@ body{
     font-size: 2rem;
     height: 36px
 }
-.close-left-form, .submit-left-form{
+.close-left-form, .submit-left-form, .change-left-form{
     height: max-content;
 }
 
