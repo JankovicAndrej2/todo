@@ -1,7 +1,9 @@
 let lists = document.querySelector(".lists");
 
-
-
+let leftForm = document.querySelector(".left-form");
+let name = document.querySelector("#name"); 
+let submitLeftForm = document.querySelector(".submit-left-form");
+let closeLeftForm = document.querySelector(".close-left-form");
 
 export function VizArray(){
     lists.textContent= "";
@@ -29,6 +31,20 @@ export function VizArray(){
         let img2 = document.createElement("img");
         img2.src = "../img/deleteIcon.png";
         img2.alt = "delete";
+
+        
+        img2.addEventListener("click", ()=>{
+            let x = JSON.parse(localStorage.getItem("key"));
+            x.splice(i,1);
+            localStorage.setItem("key", JSON.stringify(x));
+            VizArray();
+        })
+        
+        
+        
+
+
+
 
         LGroup.appendChild(GName);
         LGroup.appendChild(img1);
