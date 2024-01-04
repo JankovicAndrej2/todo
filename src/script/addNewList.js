@@ -1,4 +1,7 @@
+import { VizArray } from "./VizArray.js";
 import { List } from "./class.js";
+
+
 
 let form = document.querySelector(".left-form");
 let submit = document.querySelector(".submit-left-form");
@@ -16,5 +19,6 @@ submit.addEventListener("click", ()=>{
     localSave.push(new List(nameInput.value));
     localStorage.setItem("key", JSON.stringify(localSave));
     nameInput.value = "";
+    VizArray();
 
 })
