@@ -3,13 +3,13 @@ let lists = document.querySelector(".lists");
 let leftForm = document.querySelector(".left-form");
 let name = document.querySelector("#name"); 
 let submitLeftForm = document.querySelector(".submit-left-form");
-let closeLeftForm = document.querySelector(".close-left-form");
 let changeIndex = -1;
 
 
 export function VizArray(){
     lists.textContent= "";
     let array = [];
+
     if(localStorage.getItem("key") === null)
     {
         array = [];
@@ -17,6 +17,8 @@ export function VizArray(){
     else{
         array = JSON.parse(localStorage.getItem("key"));
     }
+
+    
     for(let i = 0; i<array.length; i++)
     {
         let LGroup = document.createElement("div");
@@ -33,7 +35,8 @@ export function VizArray(){
         let img2 = document.createElement("img");
         img2.src = "../img/deleteIcon.png";
         img2.alt = "delete";
-
+        
+        //EditIcon event lisener
         img1.addEventListener("click", ()=>{
             changeIndex = i;
             name.value = array[i].name;
@@ -42,11 +45,8 @@ export function VizArray(){
             submitLeftForm.classList.remove("submit-left-form");
             submitLeftForm.classList.add("change-left-form");
         })
-        
 
-
-
-        
+        //delete button event lisener
         img2.addEventListener("click", ()=>{
             let x = JSON.parse(localStorage.getItem("key"));
             x.splice(i,1);
@@ -54,11 +54,6 @@ export function VizArray(){
             VizArray();
         })
         
-        
-        
-
-
-
 
         LGroup.appendChild(GName);
         LGroup.appendChild(img1);
