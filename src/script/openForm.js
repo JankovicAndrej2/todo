@@ -1,4 +1,5 @@
 import { cancelLeftForm } from "./cancelLeftForm.js";
+import {submitLeftForm} from "./submitLeftForm.js";
 export function openForm()
 {
     let leftForm = document.querySelector(".left-form");
@@ -8,10 +9,8 @@ export function openForm()
     cancelButton.addEventListener("click", cancelLeftForm);
 
     let submitButton = document.querySelector(".submit-left-form");
+    submitButton.addEventListener("click", submitLeftForm);
 
-
-
-    
 
 
 }
