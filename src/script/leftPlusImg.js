@@ -1,7 +1,8 @@
+import { VizArray, changeIndex } from "./VizArray.js";
 
-//function is used to check if user wants to edit or add new item on list, so submit button is save or change
 let leftPlus = document.querySelector(".left-plus-img");
 let submitLeftForm = document.querySelector(".submit-left-form");
+let name = document.querySelector("#name");
 
 leftPlus.addEventListener("click",()=>{
     submitLeftForm.textContent = "Save";
