@@ -1,4 +1,5 @@
 import { List } from "./class.js";
+import { VisualizeArray } from "./vizualizeArray.js";
 
 export function submitLeftForm(){
     let name = document.querySelector("#name");
@@ -11,6 +12,6 @@ export function submitLeftForm(){
     }
     array.push(new List(name.value));
     localStorage.setItem("key", JSON.stringify(array));
-
     name.value = "";
+    VisualizeArray();
 }
