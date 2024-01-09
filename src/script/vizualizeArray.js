@@ -1,3 +1,6 @@
+import { deleteLeftItem } from "./deleteLeftItem.js";
+
+
 export function VisualizeArray(){
     
     let lists = document.querySelector(".lists");
@@ -25,7 +28,10 @@ export function VisualizeArray(){
             img2.src = "../img/deleteIcon.png";
             img2.alt = "delete";
     
-    
+            
+            img2.addEventListener("click", ()=>{deleteLeftItem(i)});
+
+
             LGroup.appendChild(GName);
             LGroup.appendChild(img1);
             LGroup.appendChild(img2);
