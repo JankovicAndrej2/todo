@@ -22,6 +22,13 @@ export function VisualizeTasks(){
         img1.src = "./img/editIcon.png";
         img2.src = "./img/deleteIcon.png";
 
+        img2.addEventListener("click", ()=>{
+            let z = JSON.parse(localStorage.getItem("key"));
+            z.splice(index, 1);
+            localStorage.setItem("key", JSON.stringify(z));
+            VisualizeTasks();
+        });
+
         leftgroup.appendChild(groupName);
         leftgroup.appendChild(img1);
         leftgroup.appendChild(img2);
