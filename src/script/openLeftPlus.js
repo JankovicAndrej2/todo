@@ -1,3 +1,4 @@
+import { VisualizeTasks } from "./VisualizeTasks";
 import { addNewTask } from "./addNewTask";
 import { Task } from "./task_class";
 
@@ -18,6 +19,7 @@ export function openLeftPlus(){
         addNewTask(new Task(name.value));
         name.value = "";
         form.style.display = "none";
+        VisualizeTasks();
     }, {once: true});
 
 
