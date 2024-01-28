@@ -80,11 +80,11 @@ body{
     margin-bottom: 3px;
 }
 
-#name{
+#name, #edit-name{
     width: 600px;
 }
 
-.left-form{
+.left-form, .edit-left-form{
     position: absolute;
     width:1100px;
     left:-webkit-calc(50% - 550px);
@@ -95,11 +95,11 @@ body{
     top:calc(50% - 18px);
     display: none;
 }
-.left-form>*{
+.left-form>*, .edit-left-form>*{
     font-size: 2rem;
     height: 36px
 }
-.close-left-form, .submit-left-form, .change-left-form{
+.close-left-form, .submit-left-form,.edit-close-left-form, .edit-submit-left-form{
     height: max-content;
 }
 
