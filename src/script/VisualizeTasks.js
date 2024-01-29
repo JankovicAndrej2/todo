@@ -46,7 +46,9 @@ export function VisualizeTasks(){
             //submit edit form
             editformbutton.addEventListener("click", ()=>{
                 let items = JSON.parse(localStorage.getItem("key"));
+                let question = items[index].isSelected;
                 items[index] = new Task(editname.value);
+                items[index].isSelected = question;
                 editname.value = "";
                 localStorage.setItem("key", JSON.stringify(items));
                 editForm.style.display = "none";
@@ -79,5 +81,6 @@ export function VisualizeTasks(){
             colorIsSelected();
         });
     });
+    colorIsSelected();
 
 }
